@@ -1,0 +1,59 @@
+body {
+    padding: 0;
+    background: #eee;
+}
+
+.in {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #222;
+    padding: 5px 0;
+    height: 20px;
+}
+
+.nav-link {
+    color: #fff;
+    margin-right: 15px;
+}
+
+.nav-link.active {
+    color: #eee;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.wrapper {
+    margin-top: 30px;
+}
+
+.wrapper .in {
+    background: #fff;
+    padding: 20px;
+}
+
+.output {
+    width: 33.33333%;
+    margin: 0 10px;
+    padding: 20px;
+    border: 1px solid #f3f3f3;
+    background: #f9f9f9;
+    display: block;
+    white-space: pre;
+}
+
+.result {
+ width: 66.33333%;
+ margin: 0 10px;
+ padding: 20px;
+ display: block;
+ height: 66%;
+}
