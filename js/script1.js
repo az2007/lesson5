@@ -22,7 +22,8 @@ for (let i = 0; i<arrayOfNumbers.length; i++) {
 for (let i = 0; i<arrayOfResults.length; i++) {
     if (typeof arrayOfResults[i] !== "undefined") {
         //console.log(i + "\t" + arrayOfResults[i] + "\n");
-        string = string + (i + ": " + arrayOfResults[i] + "; ");
+        //string = string + (i + ": " + arrayOfResults[i] + "; ");
+        string = string + (i + "\t" + arrayOfResults[i] + "\n");
     }
     //console.log(i + "\t" + arrayOfResults[i] + "\n");
 }
@@ -30,7 +31,7 @@ for (let i = 0; i<arrayOfResults.length; i++) {
 let object = {
     array: string
 }
-console.log(object);
+//console.log(object.array);
 //document.querySelector(".result").innerText = string;
 /*let companies = [];
 let myCompany = {
@@ -39,8 +40,8 @@ let myCompany = {
 }
 companies.push(myCompany);
 companies.push({name: "Toyota", year: 1886});
-//console.log(companies);
-let user = {
+//console.log(companies);*/
+/*let user = {
     firstName: "Назар",
     secondName: "Гоманов",
     email: "Nazikagaga@gmail.com",
@@ -67,3 +68,20 @@ for (let element of arrayOfNumbers) {
 
 
 //console.log(arrayOfResults);
+let people = [];
+function addPerson() {
+    let inputName = document.querySelector('#name').value;
+    let inputAge = document.querySelector('#age').value;
+    let person = {
+        name: inputName,
+        age: inputAge 
+    }
+    people.push(person);
+    //console.log(person);
+    let resultString = "";
+    for (let i in people) {
+        resultString = resultString + "Ім'я: " + people[i].name + "; " + "Вік: " + people[i].age + " років" + ";\n";
+    } 
+    document.querySelector(".result").innerText = resultString;
+    //console.log(people);
+}
