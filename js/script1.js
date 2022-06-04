@@ -1,8 +1,9 @@
-var arrayOfNumbers = [2, 5, 3, 5, 2, 8, 9, 0, 2, 4, 5, 3, 2, 1, 35, 9, 88, 7, 28, 81, 9];
-var arrayOfResults = [];
-var number;
+let arrayOfNumbers = [2, 5, 3, 5, 2, 8, 9, 0, 2, 4, 5, 3, 2, 1, 35, 9, 88, 7, 28, 81, 9];
+let arrayOfResults = [];
+let number;
+let string = "";
 //console.log(arrayOfResults[0]);
-var n;
+let n;
 for (let i = 0; i<arrayOfNumbers.length; i++) {
     number = arrayOfNumbers[i];
       
@@ -18,17 +19,20 @@ for (let i = 0; i<arrayOfNumbers.length; i++) {
         }*/
     }
 }
-let string = "";
 for (let i = 0; i<arrayOfResults.length; i++) {
     if (typeof arrayOfResults[i] !== "undefined") {
         //console.log(i + "\t" + arrayOfResults[i] + "\n");
-        string = string + (i + "\t" + arrayOfResults[i] + "\n");
+        string = string + (i + ": " + arrayOfResults[i] + "; ");
     }
     //console.log(i + "\t" + arrayOfResults[i] + "\n");
 }
 //console.log(string);
-document.querySelector(".result").innerText = string;
-let companies = [];
+let object = {
+    array: string
+}
+console.log(object);
+//document.querySelector(".result").innerText = string;
+/*let companies = [];
 let myCompany = {
     name: "Ford",
     year: 1969
@@ -55,11 +59,11 @@ console.log(typeof 15);
 console.log(typeof numbers);
 for (let element of arrayOfNumbers) {
     console.log(element);
-}
-let object = {
-    array: arrayOfNumbers.length
-}
-console.log(object);
+}*/
+/*for (let property in object) {
+    console.log("object" + property + " = " + object[property]);
+}*/
+
 
 
 //console.log(arrayOfResults);
