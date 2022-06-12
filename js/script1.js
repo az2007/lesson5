@@ -66,22 +66,35 @@ for (let element of arrayOfNumbers) {
 }*/
 
 
-
-//console.log(arrayOfResults);
-let people = [];
+let ages = [];
+let person =[];
+let names = [];
+let i=0;
 function addPerson() {
     let inputName = document.querySelector('#name').value;
     let inputAge = document.querySelector('#age').value;
-    let person = {
+    inputAge = Number(inputAge);
+        person[i] = {
         name: inputName,
-        age: inputAge 
+        age: inputAge,
+        toString() {
+            return `  Ім'я: ${this.name}   Вік: ${this.age}`;
+        }, 
     }
-    people.push(person);
-    //console.log(person);
-    let resultString = "";
-    for (let i in people) {
-        resultString = resultString + "Ім'я: " + people[i].name + "; " + "Вік: " + people[i].age + " років" + ";\n";
-    } 
-    document.querySelector(".result").innerText = resultString;
+    if (inputAge > 15) {
+        console.log("Не можу вивести");
+    }    
+    else {  
+            names.push(person.name);    
+            ages.push(person.age);
+            person.sort(function(a, b) {
+                return a.age - b.age
+            });
+              console.log(person); 
+              document.querySelector(".result").innerHTML = person;
+              //("Ім'я: " + person[j].name + "   Вік: " + person[j].age);
+            
+            i++;
+    }  
     //console.log(people);
 }

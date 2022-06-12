@@ -51,9 +51,17 @@ body {
 }
 
 .result {
- width: 66.33333%;
- margin: 0 10px;
- padding: 20px;
- display: block;
- height: 66%;
+   width: 66.33333%;
+   margin: 0 10px;
+   padding: 20px;
+   display: block;
+   height: 66%;
+}
+
+.list {
+    width: 66.33333%;
+    margin: 0 10px;
+    padding: 20px;
+    display: block;
+    height: 66%;  
 }
