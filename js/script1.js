@@ -66,35 +66,29 @@ for (let element of arrayOfNumbers) {
 }*/
 
 
-let ages = [];
 let person =[];
-let names = [];
-let i=0;
 function addPerson() {
     let inputName = document.querySelector('#name').value;
     let inputAge = document.querySelector('#age').value;
     inputAge = Number(inputAge);
-        person[i] = {
+    let newPerson = {
         name: inputName,
         age: inputAge,
-        toString() {
+        /*toString() {
             return `  Ім'я: ${this.name}   Вік: ${this.age}`;
-        }, 
+        },*/ 
     }
-    if (inputAge > 15) {
-        console.log("Не можу вивести");
-    }    
-    else {  
-            names.push(person.name);    
-            ages.push(person.age);
-            person.sort(function(a, b) {
-                return a.age - b.age
-            });
-              console.log(person); 
-              document.querySelector(".result").innerHTML = person;
-              //("Ім'я: " + person[j].name + "   Вік: " + person[j].age);
-            
-            i++;
-    }  
+    person.push(newPerson);
+    person.sort(function(a, b) {
+        return a.age - b.age
+    });
+    let resultString = "";
+    for (let i = 0; i < person.length; i++) {
+        if (person[i].age <= 16)  {
+           resultString = resultString + `  Ім'я: ${person[i].name}   Вік: ${person[i].age}`;
+        }
+        //resultString.push(resultString);
+    }
+    document.querySelector(".result").innerHTML = resultString;  
     //console.log(people);
 }

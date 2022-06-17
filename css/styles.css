@@ -65,3 +65,15 @@ body {
     display: block;
     height: 66%;  
 }
+
+.redText {
+    color:red;
+}
+
+.yellowText {
+    color:yellow;
+}
+
+.greenText {
+    color: green;
+}
